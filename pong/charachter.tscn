@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://c0118wb3uxogu"]
+
+[ext_resource type="Script" uid="uid://cxp1b4owgxdd7" path="res://pong_man.gd" id="1_dcadf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m84wb"]
+size = Vector2(1, 4)
+
+[node name="Charachter" type="Node2D" unique_id=1541557581]
+
+[node name="PongMan" type="CharacterBody2D" parent="." unique_id=2119023347]
+scale = Vector2(46.2, 46.2)
+script = ExtResource("1_dcadf")
+
+[node name="ColorRect" type="ColorRect" parent="PongMan" unique_id=1602892808]
+offset_left = -1.0
+offset_top = -3.0
+offset_bottom = 1.0
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PongMan" unique_id=666732928]
+position = Vector2(-0.5, -1)
+shape = SubResource("RectangleShape2D_m84wb")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1020132383]
